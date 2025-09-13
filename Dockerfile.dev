@@ -1,0 +1,12 @@
+FROM node:20-alpine
+WORKDIR /app
+
+# ставим зависимости отдельно для кеша
+COPY package.json ./
+RUN npm install --no-audit --no-fund
+
+# копируем код
+COPY . .
+
+EXPOSE 5173
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
