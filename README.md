@@ -1,4 +1,4 @@
-# blog_taiga_ui
+# Blog - тестовая сборка
 
 **React + Tailwind + Docker Blog**
 
