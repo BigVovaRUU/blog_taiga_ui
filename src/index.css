@@ -2,4 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: light; }
+@layer base {
+  html { font-family: 'Inter', system-ui, sans-serif; }
+  body { @apply bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100; }
+}
+
+/* необязательные, но приятные мелочи */
+@layer utilities {
+  .glass {
+    @apply bg-white/60 dark:bg-slate-900/60 backdrop-blur border border-slate-200 dark:border-slate-800;
+  }
+}
